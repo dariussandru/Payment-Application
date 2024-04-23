@@ -1,0 +1,29 @@
+<div class="modal-body" style="overflow: hidden">
+  <form #formOTP="ngForm" (submit)="onSubmitOTP(formOTP)">
+    <div class="row mt-5 justify-content-center">
+      <div class="col-7">
+        <div class="mb-3">
+          <label class="mb-2">One time password</label>
+          <input
+            class="form-control form-control-lg"
+            placeholder="Enter the One Time Password"
+            name="OTPinputFromUser"
+            id="OTPinputFromUser"
+            required
+            minlength="4"
+            maxlength="4"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 col-6 mx-auto mb-3">
+      <button class="btn btn-lg btn-success" type="submit">Submit</button>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-lg btn-danger" type="button" (click)="close()">
+        Close
+      </button>
+    </div>
+  </form>
+</div>
